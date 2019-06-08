@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sasha.smarthcs">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/house"
+        android:label="УмныйЖКХ"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".some_work_class.Cabinet"></activity>
+        <activity
+            android:name=".Main_1.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name=".InfoS.WaterInfo"
+            android:screenOrientation="portrait" android:theme="@style/AppTheme.SlidrActivityTheme"/>
+        <activity
+            android:name=".InfoS.GazInfo"
+            android:screenOrientation="portrait" android:theme="@style/AppTheme.SlidrActivityTheme"/>
+        <activity
+            android:name=".InfoS.LightInfo"
+            android:screenOrientation="portrait" android:theme="@style/AppTheme.SlidrActivityTheme"/>
+        <activity
+            android:name=".InfoS.TotalInfo"
+            android:screenOrientation="portrait" android:theme="@style/AppTheme.SlidrActivityTheme" />
+        <activity android:name=".Daily_INFo.Daily_gas_activity" android:theme="@style/AppTheme.SlidrActivityTheme" />
+        <activity android:name=".Daily_INFo.Daily_light_activity" android:theme="@style/AppTheme.SlidrActivityTheme" />
+        <activity android:name=".Daily_INFo.Daily_water_activity" android:theme="@style/AppTheme.SlidrActivityTheme" />
+    </application>
+
+</manifest>
