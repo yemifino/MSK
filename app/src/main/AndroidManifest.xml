@@ -15,7 +15,6 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".some_work_class.Cabinet"></activity>
         <activity
             android:name=".Main_1.MainActivity"
             android:screenOrientation="portrait">

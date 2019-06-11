@@ -6,17 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.sasha.smarthcs.Daily_INFo.Daily_gas_activity;
 import com.example.sasha.smarthcs.InfoS.GazInfo;
 import com.example.sasha.smarthcs.InfoS.LightInfo;
 import com.example.sasha.smarthcs.InfoS.TotalInfo;
 import com.example.sasha.smarthcs.InfoS.WaterInfo;
 import com.example.sasha.smarthcs.Main_1.MainActivity;
-import com.example.sasha.smarthcs.Main_1.RecyclerViewAdapter;
+import com.example.sasha.smarthcs.Main_1.RecyclerViewAdapter_GSV;
 import com.example.sasha.smarthcs.Retrofit.API;
 import com.example.sasha.smarthcs.Retrofit.POST_GSV;
 import com.example.sasha.smarthcs.Retrofit.has_gas;
@@ -71,15 +68,24 @@ public class ProfileActivity extends AppCompatActivity {
         cards3.add(4,12);
         cards3.add(5,11);
 onGas();
+/*
+Получаем по голове и показания газа за последние 6 месяцев
+ */
 onLight();
+/*
+Тоже самое только свет
+ */
 onWater();
+/*
+вода и далее общие затраты на газ ,воду и свет в каждом из 6 месяцев
+ */
 onTotal();
 
 
 
         RecyclerView bill_list = findViewById(R.id.biil_list);
         bill_list.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false));
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(getResources(), new RecyclerViewAdapter.OnResourceSelected() {
+        RecyclerViewAdapter_GSV adapter = new RecyclerViewAdapter_GSV(getResources(), new RecyclerViewAdapter_GSV.OnResourceSelected() {
             @Override
             public void onResourcesSelected(int pos) {
                 if(pos == 0) {
@@ -230,7 +236,7 @@ call.enqueue(new Callback<has_total>() {
                 this,
                 new Amount(new BigDecimal(String.valueOf(Integer.valueOf(MainActivity.GSV.get(0))+
                         Integer.valueOf(MainActivity.GSV.get(1))+
-                        Integer.valueOf(MainActivity.GSV.get(2)))), Currency.getInstance("RUB")),
+                        Integer.valueOf(MainActivity.GSV.get(2)))), Currency.getInstance("RUB")), //Оплата через касу
                 new ShopParameters(
                         "Умный ЖКХ",
                         "Оплата ЖКХ",

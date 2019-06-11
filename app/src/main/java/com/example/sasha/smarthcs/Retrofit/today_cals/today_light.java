@@ -13,7 +13,5 @@ public class today_light {
         return day;
     }
 
-    public void setDay(List<String> day) {
-        this.day = day;
-    }
+
 }

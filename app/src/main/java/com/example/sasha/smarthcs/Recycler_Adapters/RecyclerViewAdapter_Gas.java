@@ -41,11 +41,11 @@ public class RecyclerViewAdapter_Gas extends RecyclerView.Adapter<RecyclerViewAd
 
         viewHolder.name.setText("Дата : ");
         if (i<4){
-        viewHolder.namet.setText( String.valueOf(cards3.get(i))+"."+ MainActivity.year);}
-        else { viewHolder.namet.setText( String.valueOf(cards3.get(i))+"."+MainActivity.year_pre);}
+        viewHolder.namet.setText(cards3.get(i) +"."+ MainActivity.year);}
+        else { viewHolder.namet.setText(cards3.get(i) +"."+MainActivity.year_pre);}
         viewHolder.cost.setText("Цена : ");
         String res;
-        String pars = ProfileActivity.Gas_cards.get(i);
+        String pars = ProfileActivity.Gas_cards.get(i);   // нужно для расшифровки данных с сервера
         pars=ProfileActivity.removeChar(pars,0);
         pars=ProfileActivity.removeChar(pars,0);
         pars=ProfileActivity.removeChar(pars,0);

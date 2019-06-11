@@ -12,7 +12,5 @@ public class today_gas {
         return day;
     }
 
-    public void setDay(List<String> day) {
-        this.day = day;
-    }
+
 }

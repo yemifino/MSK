@@ -19,8 +19,6 @@ public class GSV {
         return array;
     }
 
-    public void setArray(List<String> array) {
-        this.array = array;
-    }
+
 
 }

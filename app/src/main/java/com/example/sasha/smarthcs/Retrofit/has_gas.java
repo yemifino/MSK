@@ -12,7 +12,4 @@ public class has_gas {
         return gas;
     }
 
-    public void setGas(List<String> gas) {
-        this.gas = gas;
-    }
 }

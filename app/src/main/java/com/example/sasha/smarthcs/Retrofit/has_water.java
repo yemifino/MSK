@@ -13,7 +13,5 @@ public class has_water {
         return water;
     }
 
-    public void setWater(List<String> water) {
-        this.water = water;
-    }
+
 }

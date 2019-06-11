@@ -43,7 +43,7 @@ public class RecyclerViewAdapter_Water extends RecyclerView.Adapter<RecyclerView
         String res;
         String pars = ProfileActivity.Water_cards.get(i);
         pars=ProfileActivity.removeChar(pars,0);
-        pars=ProfileActivity.removeChar(pars,0);
+        pars=ProfileActivity.removeChar(pars,0);  // нужно для расшифровки данных с сервера
         pars=ProfileActivity.removeChar(pars,0);
         pars=ProfileActivity.removeChar(pars,3);
         pars=ProfileActivity.removeChar(pars,3);

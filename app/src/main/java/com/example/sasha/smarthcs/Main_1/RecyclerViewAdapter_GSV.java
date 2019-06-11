@@ -1,5 +1,6 @@
 package com.example.sasha.smarthcs.Main_1;
 
+import android.annotation.SuppressLint;
 import android.content.res.Resources;
 import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 
 import com.example.sasha.smarthcs.R;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+public class RecyclerViewAdapter_GSV extends RecyclerView.Adapter<RecyclerViewAdapter_GSV.ViewHolder> {
 
     public interface OnResourceSelected {
         void onResourcesSelected(int pos);
@@ -21,7 +22,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     Resources resources;
     private OnResourceSelected callback;
 
-    public RecyclerViewAdapter(Resources resources, OnResourceSelected callback) {
+    public RecyclerViewAdapter_GSV(Resources resources, OnResourceSelected callback) {
         this.resources = resources;
         this.callback = callback;
     }
@@ -36,9 +37,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
 
+    @SuppressLint("SetTextI18n")
     @Override
 
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, @SuppressLint("RecyclerView") final int i) {
 
         viewHolder.name.setText(MainActivity.cards.get(i).name);
 

@@ -35,12 +35,12 @@ public class MainActivity extends AppCompatActivity {
 
     public static Retrofit retrofit;
     public static int index = 0;
-    public static double gas_ideal = 9.22;
-    public static double water_ideal = 44.56;
-    public static double light_ideal = 6.67;
+    public static double gas_ideal = 9.22; // средняя цена на газ по всем тарифам на 30.05.2019
+    public static double water_ideal = 44.56;// средняя цена на воду по всем тарифам на 30.05.2019
+    public static double light_ideal = 6.67;// средняя цена на свет по всем тарифам на 30.05.2019
 
-    public static String LOCAL = "http://192.168.1.9:5000/";
-    public static String LOGIN;
+    public static String LOCAL = "http://192.168.1.9:5000/"; // адрес сервера
+    public static String LOGIN; // нужно для корректного получения данных в дальнейшем
     public static String year="2019";
     public static String year_pre="2018";
 
@@ -101,11 +101,6 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<GSV>() {
             @Override
             public void onResponse(@NotNull Call<GSV> call,@NotNull Response<GSV> response) {
-                GSV gsv=response.body();
-// ArrayList<String> arrayList=new ArrayList<>();
-// arrayList.add("8709");
-// arrayList.add("5450");
-// arrayList.add("3736");
                 List<String> arrayList = response.body().getArray();
                 cards.add(new Card("Вода",Integer.valueOf(arrayList.get(0))));
 
@@ -129,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public static double water_resurse(int cost)
+  /*  public static double water_resurse(int cost)
     {
         double res = (double)(cost) / 100;
         return res + 0.005;
@@ -146,5 +141,5 @@ public class MainActivity extends AppCompatActivity {
         double res = (double)(cost) / 500;
         return res + 0.005;
     }
-
+*/
 }

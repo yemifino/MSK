@@ -12,7 +12,5 @@ public class has_total {
         return total;
     }
 
-    public void setTotal(List<String> total) {
-        this.total = total;
-    }
+
 }

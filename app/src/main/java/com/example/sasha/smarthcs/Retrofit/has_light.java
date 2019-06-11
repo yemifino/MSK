@@ -13,7 +13,5 @@ public class has_light {
         return light;
     }
 
-    public void setLight(List<String> light) {
-        this.light = light;
-    }
+
 }

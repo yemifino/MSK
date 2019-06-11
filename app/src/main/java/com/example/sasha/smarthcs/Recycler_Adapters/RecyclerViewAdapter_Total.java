@@ -42,7 +42,7 @@ public class RecyclerViewAdapter_Total extends RecyclerView.Adapter<RecyclerView
         viewHolder.cost.setText("Цена : ");
         String res;
         String pars = ProfileActivity.Total_cards.get(i);
-        pars=ProfileActivity.removeChar(pars,0);
+        pars=ProfileActivity.removeChar(pars,0);  // нужно для расшифровки данных с сервера
         pars=ProfileActivity.removeChar(pars,0);
         pars=ProfileActivity.removeChar(pars,0);
         pars=ProfileActivity.removeChar(pars,4);
